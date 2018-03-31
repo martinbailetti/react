@@ -1,0 +1,25 @@
+https://nodejs.org/es/
+
+https://www.npmjs.com/
+
+https://github.com/facebookincubator/create-react-app
+npx create-react-app my-app
+cd my-app
+npm start
+
+Copiar archivos webpack y webpack dev de https://github.com/LeonidasEsteban/webpack-curso/tree/master/invie
+npm init
+
+npm install
+
+para build en package json están los comandos
+
+npm run build:prod 
+npm run build:dev
+
+npm install react react-dom --save
+
+// Sublime Babel Syntax Package /// View / Syntax / babel
+
+
+Componentes con mayúscula
