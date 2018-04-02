@@ -19,6 +19,10 @@ bindeando evento
  // handleClick = (event) => {
   
  // }
+  handleClick = (event) => {
+
+    this.props.handleClick(this.props);
+  }
   render() {
     const styles = {
       container: {
@@ -29,7 +33,7 @@ bindeando evento
       }
     }
     return (
-      <div className="Media"  onClick={this.props.handleClick}>
+      <div className="Media"  onClick={this.handleClick}>
         <div className="Media-cover">
           <img
             src={this.props.cover}
