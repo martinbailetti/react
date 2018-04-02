@@ -83,6 +83,9 @@ Containers Qué hace
     Generados por higher order components
 
 
+OJO
+Los componentes funcionales o puros no deben manejar sus propios eventos.
+
 ////////////////////////////////////
 ARQUITECTURA
 
