@@ -1,7 +1,24 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import './media.css';
 
-class Media extends Component {
+class Media extends PureComponent {
+
+/* 
+  Para manetener contexto this
+bindeando evento
+   constructor(props) {
+     super(props)
+     this.handleClick = this.handleClick.bind(this);
+   }
+  handleClick(event){
+    console.log(this.props.image)
+  }
+  */
+  //así más fácil
+  handleClick = (event) => {
+  
+  }
   render() {
     const styles = {
       container: {
@@ -12,10 +29,10 @@ class Media extends Component {
       }
     }
     return (
-      <div className="Media">
+      <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img
-            src={this.props.image}
+            src={this.props.cover}
             alt=""
             width={260}
             height={160}
@@ -29,5 +46,11 @@ class Media extends Component {
   }
 }
 
+Media.propTypes = {
+  cover: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string,
+  type: PropTypes.oneOf(['video', 'audio']),
+}
 
 export default Media;

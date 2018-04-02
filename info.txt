@@ -23,3 +23,41 @@ npm install react react-dom --save
 
 
 Componentes con mayúscula
+
+instala prop-types validación
+npm install prop-types --save
+
+https://reactjs.org/docs/typechecking-with-proptypes.html
+
+Eventos
+/* 
+  Para manetener contexto this
+bindeando evento
+   constructor(props) {
+     super(props)
+     this.handleClick = this.handleClick.bind(this);
+   }
+  handleClick(event){
+    console.log(this.props.image)
+  }
+  */
+  //así más fácil
+  handleClick = (event) => {
+    console.log(this.props.image)
+  }
+<div className="Media" onClick={this.handleClick}>
+
+https://reactjs.org/docs/handling-events.html
+
+////////////////////
+Clásico mapeo de dta
+          playlist.map((item) => {
+            return <Media {...item} key={item.id} />
+          })
+
+
+////////////////////
+Usar PureComponent para usar el shouldComponentUpdate predeterminado... más económico
+
+USa componente funcional si sólo necesitas render
+
